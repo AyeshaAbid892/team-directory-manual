@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-🔗 **[Live Demo](https://team-directory-eight.vercel.app)**  
+🔗 **[Live Demo](https://team-directory-manual.vercel.app)**  
 <br>
 🎥 **[Video Walkthrough](https://youtu.be/JqQxSIju80s)** *(3–5 min screen recording)*
 
