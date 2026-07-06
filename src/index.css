@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Design Tokens — "Roster: Ledger" edition
+   A warm, editorial, print-index-card aesthetic — ivory paper backgrounds,
+   a serif display face for names and headings, terracotta as the single
+   accent, and square-cornered cards instead of the rounded SaaS-card look.
+   ========================================================================== */
+
+:root {
+  /* Color */
+  --color-bg: #faf6ef;
+  --color-surface: #fffdf9;
+  --color-surface-sunken: #f2ece0;
+  --color-border: #e3d9c6;
+  --color-border-strong: #cdbc9e;
+
+  --color-text-primary: #241c15;
+  --color-text-secondary: #6b5d4f;
+  --color-text-muted: #9c8f7e;
+  --color-text-inverse: #fffdf9;
+
+  --color-accent: #b4432a;
+  --color-accent-strong: #8f3220;
+  --color-accent-soft: #f4e3db;
+  --color-accent-soft-border: #e8c4b4;
+
+  --color-admin-bg: #f1e6c8;
+  --color-admin-text: #7a5c0e;
+  --color-admin-border: #dfc784;
+
+  --color-danger: #a3372b;
+
+  --color-skill-bg: #f2ece0;
+  --color-skill-text: #5b4e3f;
+  --color-skill-border: #e3d9c6;
+
+  /* Avatar palette — deterministic per-name assignment, warm tones */
+  --avatar-1-bg: #f4e3db; --avatar-1-fg: #8f3220;
+  --avatar-2-bg: #e7e6d3; --avatar-2-fg: #5c5a2e;
+  --avatar-3-bg: #e2e8e2; --avatar-3-fg: #33543f;
+  --avatar-4-bg: #f1e6c8; --avatar-4-fg: #7a5c0e;
+  --avatar-5-bg: #e6e1ec; --avatar-5-fg: #4a3d6b;
+  --avatar-6-bg: #ece0d8; --avatar-6-fg: #6b4433;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radius — deliberately small/square, not the rounded SaaS look */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 6px;
+  --radius-full: 999px;
+
+  /* Shadow — flatter, more paper-like than glowing SaaS shadows */
+  --shadow-xs: 0 1px 0 rgba(36, 28, 21, 0.06);
+  --shadow-sm: 0 2px 0 rgba(36, 28, 21, 0.05);
+  --shadow-md: 0 4px 0 rgba(36, 28, 21, 0.06);
+  --shadow-lg: 0 10px 30px rgba(36, 28, 21, 0.18);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle at 1px 1px, rgba(36, 28, 21, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

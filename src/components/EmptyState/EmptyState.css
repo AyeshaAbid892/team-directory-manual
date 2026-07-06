@@ -1,0 +1,57 @@
+/* src/components/EmptyState/EmptyState.css */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-7) var(--space-5);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-sunken);
+}
+
+.empty-state__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.empty-state__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.empty-state__text {
+  font-size: 0.86rem;
+  color: var(--color-text-secondary);
+  max-width: 320px;
+}
+
+.empty-state__clear-btn {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state__clear-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-strong);
+}

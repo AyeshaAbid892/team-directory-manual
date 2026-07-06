@@ -1,0 +1,19 @@
+/* src/components/MemberGrid/MemberGrid.css */
+
+.member-grid--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 700px) {
+  .member-grid--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.member-grid--list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
