@@ -1,0 +1,43 @@
+<svg width="1200" height="150" viewBox="0 0 1200 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#faf6ef" />
+      <stop offset="100%" stop-color="#f2ece0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="150" fill="url(#footerBg)" />
+  <rect x="0" y="0" width="1200" height="3" fill="#241c15" />
+
+  <!-- Logo mark -->
+  <rect x="80" y="50" width="34" height="34" rx="3" fill="#b4432a" />
+  <text x="97" y="73" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#faf6ef" text-anchor="middle">R</text>
+
+  <text x="128" y="63" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" fill="#241c15">Roster</text>
+  <text x="128" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-style="italic" fill="#6b5d4f">Built with React + Vite</text>
+
+  <!-- Divider -->
+  <line x1="330" y1="44" x2="330" y2="98" stroke="#cdbc9e" stroke-width="1" />
+
+  <!-- Center meta -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#6b5d4f">
+    <text x="360" y="63" font-weight="600" fill="#241c15">Open-source starter</text>
+    <text x="360" y="82">MIT licensed &#183; component architecture kept identical to the original</text>
+  </g>
+
+  <!-- Right-aligned stamped tags -->
+  <g font-family="'Consolas', 'JetBrains Mono', monospace" font-size="11.5" font-weight="500">
+    <rect x="840" y="48" width="86" height="26" fill="none" stroke="#241c15" stroke-width="1" />
+    <text x="883" y="65" fill="#241c15" text-anchor="middle">RESPONSIVE</text>
+
+    <rect x="936" y="48" width="80" height="26" fill="none" stroke="#241c15" stroke-width="1" />
+    <text x="976" y="65" fill="#241c15" text-anchor="middle">ACCESSIBLE</text>
+
+    <rect x="1026" y="48" width="94" height="26" fill="none" stroke="#b4432a" stroke-width="1.2" />
+    <text x="1073" y="65" fill="#b4432a" text-anchor="middle">V2 · LEDGER</text>
+  </g>
+
+  <line x1="80" y1="106" x2="1120" y2="106" stroke="#e3d9c6" stroke-width="1" />
+  <text x="80" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#9c8f7e">&#169; 2026 Roster. Same functionality, redrawn by hand.</text>
+  <text x="1120" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#9c8f7e" text-anchor="end">Made with care</text>
+</svg>
