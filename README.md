@@ -1,6 +1,33 @@
+
+<p align="center">
+  <img src="./header.svg" alt="Roster — Team Directory banner" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.3-149eca?style=flat-square&logo=react&logoColor=white" alt="React 18.3" />
+  <img src="https://img.shields.io/badge/Vite-5.4-646cff?style=flat-square&logo=vite&logoColor=white" alt="Vite 5.4" />
+  <img src="https://img.shields.io/badge/License-MIT-14b8a6?style=flat-square" alt="MIT License" />
+  <img src="https://img.shields.io/badge/Status-Production--styled-0f766e?style=flat-square" alt="Status" />
+</p>
+
+## Live Demo
+
+🔗 **[Live Demo](https://team-directory-eight.vercel.app)**  
+<br>
+🎥 **[Video Walkthrough](https://youtu.be/JqQxSIju80s)** *(3–5 min screen recording)*
+
+> **Deployment:** GitHub Pages — Settings → Pages → Source: `main` / `root` → Save
+
+---
+
+
+
+<img width="1052" height="714" alt="image" src="https://github.com/user-attachments/assets/9d16844c-d924-462d-a5d7-d5751c62e1d0" />
+
+
 # Roster — Team Directory
 
-A fully interactive team directory built with React and Vite — searchable, filterable, sortable, and editable, with a warm, editorial "ledger" visual style instead of the typical rounded-card SaaS look.
+>A fully interactive team directory built with React and Vite — searchable, filterable, sortable, and editable, with a warm, editorial "ledger" visual style instead of the typical rounded-card SaaS look.
 
 <br/>
 
@@ -23,22 +50,25 @@ A fully interactive team directory built with React and Vite — searchable, fil
 
 ## 1. What this project is
 
-**Roster** is a team-profile directory — the kind of internal tool a People Ops or HR team would use to keep track of who's on a team, what they do, and how to reach them. It lets you:
+>**Roster** is a team-profile directory — the kind of internal tool a People Ops or HR team would use to keep track of who's on a team, what they do, and how to reach them. It lets you:
 
-- Browse every team member as a card grid, or switch to a compact list view.
-- Search live across name, role, skill, and location.
-- Filter by All / Admins / Following, and sort by recency, name, or role.
-- Click any member to open a full profile panel.
-- Add a new team member through a validated form — they appear instantly.
-- Edit or remove an existing member.
-- Follow/unfollow people, with live counts.
-- Export the currently visible list to a real CSV file.
+>- Browse every team member as a card grid, or switch to a compact list view.
+>- Search live across name, role, skill, and location.
+>- Filter by All / Admins / Following, and sort by recency, name, or role.
+>- Click any member to open a full profile panel.
+>- Add a new team member through a validated form — they appear instantly.
+>- Edit or remove an existing member.
+>- Follow/unfollow people, with live counts.
+>- Export the currently visible list to a real CSV file.
 
-It's built entirely with **React 18** and **Vite 5**, with no backend — all state lives in memory via React hooks. That means it runs anywhere a static site can be hosted, with nothing to configure or maintain on a server.
+>It's built entirely with **React 18** and **Vite 5**, with no backend — all state lives in memory via React hooks. That means it runs anywhere a static site can be hosted, with nothing to configure or maintain on a server.
 
-The visual identity — warm ivory paper tones, a serif display face, terracotta as the single accent color, and square-edged "index card" styling — is deliberately built to look like a printed ledger or a filed record system rather than a generic rounded-corner dashboard template. Every design decision behind that look is explained in [§7](#7-design-system--the-ledger-visual-language).
+>The visual identity — warm ivory paper tones, a serif display face, terracotta as the single accent color, and square-edged "index card" styling — is deliberately built to look like a printed ledger or a filed record system rather than a generic rounded-corner dashboard template. Every design decision behind that look is explained in [§7](#7-design-system--the-ledger-visual-language).
 
 <br/>
+
+<img width="929" height="550" alt="image" src="https://github.com/user-attachments/assets/e7a4ac2f-47ee-46cb-a62c-084a9177e682" />
+
 
 ## 2. Feature tour — everything that's interactive
 
@@ -74,6 +104,8 @@ The visual identity — warm ivory paper tones, a serif display face, terracotta
 | **No component library** | Every control — the modal, the drawer, the dropdown, the toast — is hand-built to share one consistent visual language, instead of inheriting the look of an off-the-shelf UI kit. |
 
 <br/>
+
+<img width="791" height="588" alt="image" src="https://github.com/user-attachments/assets/dc5296d6-218d-4e0a-8af7-d396b7db477b" />
 
 ## 4. Project structure
 
@@ -115,15 +147,15 @@ team-directory/
         └── Toast/                 # Transient, click-to-dismiss notifications
 ```
 
-**Rule followed throughout:** every component gets its own folder with exactly one `.jsx` and one `.css` file. No component is combined into another file, and no two components share a stylesheet — which makes it possible to delete or replace any single piece without touching anything else.
+>**Rule followed throughout:** every component gets its own folder with exactly one `.jsx` and one `.css` file. No component is combined into another file, and no two components share a stylesheet — which makes it possible to delete or replace any single piece without touching anything else.
 
 <br/>
 
 ## 5. Architecture — how data flows through the app
 
-### The core idea: one hook, one source of truth
+>### The core idea: one hook, one source of truth
 
-All directory data — the member list, the search query, the active filter, the sort order, and who's being followed — lives inside **one custom hook**: `useTeamDirectory()`.
+>All directory data — the member list, the search query, the active filter, the sort order, and who's being followed — lives inside **one custom hook**: `useTeamDirectory()`.
 
 ```js
 // src/hooks/useTeamDirectory.js
@@ -138,11 +170,14 @@ export function useTeamDirectory() {
 }
 ```
 
-`App.jsx` calls this hook once and hands each piece of state and each callback down to exactly the component that needs it — `Sidebar` gets the stats and the filter/sort/view controls, `SearchBar` gets the query, `MemberGrid` gets the filtered member list. No component reaches into a global store; everything arrives as a plain prop.
+>`App.jsx` calls this hook once and hands each piece of state and each callback down to exactly the component that needs it — `Sidebar` gets the stats and the filter/sort/view controls, `SearchBar` gets the query, `MemberGrid` gets the filtered member list. No component reaches into a global store; everything arrives as a plain prop.
+
+<img width="816" height="517" alt="image" src="https://github.com/user-attachments/assets/596019e9-6b98-42f3-b9c1-dc533103a8bb" />
+
 
 ### Why the filtered list is `useMemo`, not its own `useState`
 
-`visibleMembers` — the list actually shown on screen — is computed with `useMemo` from `members`, `query`, `activeFilter`, `sortBy`, and `following`, rather than stored as its own state:
+>`visibleMembers` — the list actually shown on screen — is computed with `useMemo` from `members`, `query`, `activeFilter`, `sortBy`, and `following`, rather than stored as its own state:
 
 ```js
 const visibleMembers = useMemo(() => {
@@ -162,11 +197,14 @@ const visibleMembers = useMemo(() => {
 }, [members, activeFilter, query, following, sortBy]);
 ```
 
-If this were a separate `useState`, every add, delete, search keystroke, or sort change would need to manually recompute and re-set it — easy to forget in one of several event handlers, which is exactly the kind of bug that causes a UI to silently show stale data. With `useMemo`, the visible list is always correct by construction, recalculated automatically whenever any of its five dependencies change.
+>If this were a separate `useState`, every add, delete, search keystroke, or sort change would need to manually recompute and re-set it — easy to forget in one of several event handlers, which is exactly the kind of bug that causes a UI to silently show stale data. With `useMemo`, the visible list is always correct by construction, recalculated automatically whenever any of its five dependencies change.
+
+<img width="1325" height="710" alt="image" src="https://github.com/user-attachments/assets/c4dfd6d1-17ef-4853-b62f-423dffcaed93" />
+
 
 ### The CRUD layer: one shape, three operations
 
-Add, Edit, and Delete all funnel through the same small set of functions, so there's exactly one place that defines what a "member record" looks like:
+>Add, Edit, and Delete all funnel through the same small set of functions, so there's exactly one place that defines what a "member record" looks like:
 
 ```js
 function toMemberRecord(formValues, existing = {}) {
@@ -183,15 +221,15 @@ function toMemberRecord(formValues, existing = {}) {
 }
 ```
 
-- **`addMember(formValues)`** calls this with no `existing` record, generating a fresh `id` and timestamp, then prepends the result to the list.
-- **`updateMember(id, formValues)`** calls it with the existing member, so the original `id` and `addedAt` are preserved while every other field is overwritten with the freshly submitted values.
-- **`removeMember(id)`** filters the member out — and also removes them from the `following` Set, so you can never end up "following" someone who no longer exists.
+>- **`addMember(formValues)`** calls this with no `existing` record, generating a fresh `id` and timestamp, then prepends the result to the list.
+>- **`updateMember(id, formValues)`** calls it with the existing member, so the original `id` and `addedAt` are preserved while every other field is overwritten with the freshly submitted values.
+>- **`removeMember(id)`** filters the member out — and also removes them from the `following` Set, so you can never end up "following" someone who no longer exists.
 
-Because Add and Edit share `toMemberRecord`, `AddMemberModal` is a single component with an `open` / `member` prop pair instead of two separate components — when `member` is `null` it's in add mode with blank fields; when `member` is a real object, its fields pre-fill and the heading/button switch to "Edit" / "Save changes."
+>Because Add and Edit share `toMemberRecord`, `AddMemberModal` is a single component with an `open` / `member` prop pair instead of two separate components — when `member` is `null` it's in add mode with blank fields; when `member` is a real object, its fields pre-fill and the heading/button switch to "Edit" / "Save changes."
 
 ### UI state vs. data state, kept separate
 
-`App.jsx` holds a second, smaller batch of state that has nothing to do with the hook — which modal is open, which profile drawer is showing, what the current toast says, and whether the layout is grid or list:
+>`App.jsx` holds a second, smaller batch of state that has nothing to do with the hook — which modal is open, which profile drawer is showing, what the current toast says, and whether the layout is grid or list:
 
 ```js
 const [viewMode, setViewMode] = useState('grid');
@@ -202,47 +240,49 @@ const [pendingDeleteMember, setPendingDeleteMember] = useState(null);
 const [toastMessage, setToastMessage] = useState('');
 ```
 
-This state describes *this render of the interface*, not facts about the team roster — keeping it out of the hook means the hook stays reusable and easy to reason about on its own.
+>This state describes *this render of the interface*, not facts about the team roster — keeping it out of the hook means the hook stays reusable and easy to reason about on its own.
 
 <br/>
+
+<img width="849" height="490" alt="image" src="https://github.com/user-attachments/assets/835c929e-9ebc-4fcb-853e-6b82c4ccf4ac" />
 
 ## 6. Deep dive — every file, explained
 
 ### `src/data/team.js`
-Seven realistic seed members, each with a full field set (`name`, `role`, `age`, `isAdmin`, `skills`, `address: { city, country }`). `useTeamDirectory` maps over this once on mount and stamps each record with a synthetic `addedAt` timestamp, staggered by a second per entry, so "Recently added" sorting has something meaningful to work with immediately.
+>Seven realistic seed members, each with a full field set (`name`, `role`, `age`, `isAdmin`, `skills`, `address: { city, country }`). `useTeamDirectory` maps over this once on mount and stamps each record with a synthetic `addedAt` timestamp, staggered by a second per entry, so "Recently added" sorting has something meaningful to work with immediately.
 
 ### `src/utils/avatar.js`
-Two small, pure functions: **`getInitials(name)`** takes the first letter of the first and last word (`"Amara Chen"` → `"AC"`), and **`getAvatarPaletteIndex(seed)`** hashes the name into a 1–6 index using a simple string hash, so the same person always gets the same avatar color, every time the app reloads.
+>Two small, pure functions: **`getInitials(name)`** takes the first letter of the first and last word (`"Amara Chen"` → `"AC"`), and **`getAvatarPaletteIndex(seed)`** hashes the name into a 1–6 index using a simple string hash, so the same person always gets the same avatar color, every time the app reloads.
 
 ### `src/utils/exportCsv.js`
-Turns the member array into real, properly-escaped CSV text (commas, quotes, and newlines inside a cell are safely quoted per the standard CSV rule), wraps it in a `Blob`, and triggers a real file download via a temporary `<a download>` element. Open the result in Excel or Google Sheets — it's valid CSV, not a fake button.
+>Turns the member array into real, properly-escaped CSV text (commas, quotes, and newlines inside a cell are safely quoted per the standard CSV rule), wraps it in a `Blob`, and triggers a real file download via a temporary `<a download>` element. Open the result in Excel or Google Sheets — it's valid CSV, not a fake button.
 
 ### `src/hooks/useTeamDirectory.js`
-The single source of truth — covered in depth in §5. This is the file to read first to understand how the app actually works.
+>The single source of truth — covered in depth in §5. This is the file to read first to understand how the app actually works.
 
 ### `src/App.jsx`
-The composition root. Calls the hook, holds the small amount of UI-only state described above, defines the handler functions that connect the two, and renders each component exactly once with only the props it needs. It contains no filtering, sorting, or CSV logic itself — all of that is delegated to the hook and the utils.
+>The composition root. Calls the hook, holds the small amount of UI-only state described above, defines the handler functions that connect the two, and renders each component exactly once with only the props it needs. It contains no filtering, sorting, or CSV logic itself — all of that is delegated to the hook and the utils.
 
 ### `src/components/Sidebar/`
-A fixed left rail holding the brand mark, the "Add member" button, a vertical list of clickable stats, the filter tabs, the sort menu, the grid/list toggle, and the "Export as CSV" button. It receives plain data and callbacks as props (`stats`, `onStatClick`, `activeFilter`, `onFilterChange`, etc.) and contains no state of its own — every click it handles is reported straight back up to `App.jsx`.
+>A fixed left rail holding the brand mark, the "Add member" button, a vertical list of clickable stats, the filter tabs, the sort menu, the grid/list toggle, and the "Export as CSV" button. It receives plain data and callbacks as props (`stats`, `onStatClick`, `activeFilter`, `onFilterChange`, etc.) and contains no state of its own — every click it handles is reported straight back up to `App.jsx`.
 
 ### `src/components/SearchBar/`
-A single controlled input — `value={query}` / `onChange={(e) => onQueryChange(e.target.value)}` — with a clear (`×`) button that only appears once there's a query, and a small result counter ("3 of 7 entries") shown while searching.
+>A single controlled input — `value={query}` / `onChange={(e) => onQueryChange(e.target.value)}` — with a clear (`×`) button that only appears once there's a query, and a small result counter ("3 of 7 entries") shown while searching.
 
 ### `src/components/FilterTabs/`
-Three tabs — All / Admins / Following — built with `role="tablist"` / `role="tab"` / `aria-selected` for accessibility, driven by a single `active` string prop so two tabs can never be active at once by mistake.
+>Three tabs — All / Admins / Following — built with `role="tablist"` / `role="tab"` / `aria-selected` for accessibility, driven by a single `active` string prop so two tabs can never be active at once by mistake.
 
 ### `src/components/SortMenu/`
-A custom dropdown (not a native `<select>`, for full styling control) that closes itself when you click outside it, using a `ref` and a `mousedown` listener attached to `document` only while the menu is open — removed again once it closes, so nothing leaks.
+>A custom dropdown (not a native `<select>`, for full styling control) that closes itself when you click outside it, using a `ref` and a `mousedown` listener attached to `document` only while the menu is open — removed again once it closes, so nothing leaks.
 
 ### `src/components/ViewToggle/`
-Two icon buttons (grid / list) using `aria-pressed` to communicate state to assistive tech. Purely presentational — it reports clicks upward and holds no state of its own.
+>Two icon buttons (grid / list) using `aria-pressed` to communicate state to assistive tech. Purely presentational — it reports clicks upward and holds no state of its own.
 
 ### `src/components/MemberGrid/`
-Takes the already-filtered-and-sorted list and renders either a grid or a stacked list of `MemberCard`s, or falls back to `EmptyState` when the list is empty. It doesn't know or care *why* the list might be empty — it just reacts to length.
+>Takes the already-filtered-and-sorted list and renders either a grid or a stacked list of `MemberCard`s, or falls back to `EmptyState` when the list is empty. It doesn't know or care *why* the list might be empty — it just reacts to length.
 
 ### `src/components/MemberCard/`
-The most interaction-dense component in the app. The whole card is clickable (`role="button"`, `tabIndex={0}`, and an `onKeyDown` handler for Enter/Space, so it's keyboard-accessible too) — but the Follow button and each skill chip need to act independently of that outer click. A small `stop()` helper handles this:
+>The most interaction-dense component in the app. The whole card is clickable (`role="button"`, `tabIndex={0}`, and an `onKeyDown` handler for Enter/Space, so it's keyboard-accessible too) — but the Follow button and each skill chip need to act independently of that outer click. A small `stop()` helper handles this:
 
 ```js
 const stop = (handler) => (event) => {
@@ -252,28 +292,28 @@ const stop = (handler) => (event) => {
 // used as: onClick={stop(() => onToggleFollow(member.id, name))}
 ```
 
-Without `stopPropagation()`, clicking Follow would also bubble up and trigger the card's own click handler, opening the drawer at the same time you meant to just follow someone.
+>Without `stopPropagation()`, clicking Follow would also bubble up and trigger the card's own click handler, opening the drawer at the same time you meant to just follow someone.
 
 ### `src/components/MemberDrawer/`
-The full-profile slide-in panel. Generates a plausible email from the person's name, formats a human-readable "member since" date from `addedAt`, and exposes Follow/Unfollow, copy email, Edit, and Delete as real actions — plus clickable skill chips that filter the directory and close the drawer in one step. Closes on **Escape** via a `keydown` listener that only exists while the drawer is open.
+>The full-profile slide-in panel. Generates a plausible email from the person's name, formats a human-readable "member since" date from `addedAt`, and exposes Follow/Unfollow, copy email, Edit, and Delete as real actions — plus clickable skill chips that filter the directory and close the drawer in one step. Closes on **Escape** via a `keydown` listener that only exists while the drawer is open.
 
 ### `src/components/AddMemberModal/`
-One form, two jobs, decided entirely by one prop: `member`. When it's `null`, the form is blank and in "add" mode; when it's a real member object, `memberToForm()` converts it back into form-shaped strings and the form becomes an "edit" form. Validation runs on submit and renders inline error messages under each field — nothing fails silently.
+>One form, two jobs, decided entirely by one prop: `member`. When it's `null`, the form is blank and in "add" mode; when it's a real member object, `memberToForm()` converts it back into form-shaped strings and the form becomes an "edit" form. Validation runs on submit and renders inline error messages under each field — nothing fails silently.
 
 ### `src/components/ConfirmDialog/`
-A small, fully generic "are you sure?" dialog — `title`, `description`, `confirmLabel`, and `onConfirm`/`onCancel`. It has no idea it's currently being used for deleting a team member; it could be reused for any destructive confirmation without modification.
+>A small, fully generic "are you sure?" dialog — `title`, `description`, `confirmLabel`, and `onConfirm`/`onCancel`. It has no idea it's currently being used for deleting a team member; it could be reused for any destructive confirmation without modification.
 
 ### `src/components/EmptyState/`
-Shown when a search or filter combination returns zero members. Reads the current query to give a specific message ("Nothing matches 'xyz'...") instead of a generic "no data" message, with a one-click way back to a clear search.
+>Shown when a search or filter combination returns zero members. Reads the current query to give a specific message ("Nothing matches 'xyz'...") instead of a generic "no data" message, with a one-click way back to a clear search.
 
 ### `src/components/Toast/`
-A single, app-wide toast. Auto-dismisses after 2.6 seconds via `setTimeout`, but is rendered as a real `<button>` so clicking it dismisses immediately. The `useEffect` cleanup (`clearTimeout`) matters: without it, a second toast replacing the first before the first's timer fires could result in a stray timeout closing a toast that was never shown.
+>A single, app-wide toast. Auto-dismisses after 2.6 seconds via `setTimeout`, but is rendered as a real `<button>` so clicking it dismisses immediately. The `useEffect` cleanup (`clearTimeout`) matters: without it, a second toast replacing the first before the first's timer fires could result in a stray timeout closing a toast that was never shown.
 
 <br/>
 
 ## 7. Design system — the "Ledger" visual language
 
-All visual decisions are centralized as CSS custom properties in `src/index.css` — nothing is a hardcoded color or size scattered across component files.
+>All visual decisions are centralized as CSS custom properties in `src/index.css` — nothing is a hardcoded color or size scattered across component files.
 
 | Token category | Values | Reasoning |
 |---|---|---|
@@ -289,7 +329,7 @@ All visual decisions are centralized as CSS custom properties in `src/index.css`
 
 ## 8. Getting started
 
-**Prerequisites:** Node.js 18+ and npm.
+>**Prerequisites:** Node.js 18+ and npm.
 
 ```bash
 # 1. Install dependencies
@@ -299,7 +339,7 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints (typically `http://localhost:5173`). Changes to any file hot-reload instantly.
+>Open the URL Vite prints (typically `http://localhost:5173`). Changes to any file hot-reload instantly.
 
 <br/>
 
@@ -315,25 +355,48 @@ Open the URL Vite prints (typically `http://localhost:5173`). Changes to any fil
 
 ## 10. Deployment
 
-The app builds to a fully static bundle — no server, no environment variables, no database — so it deploys anywhere that serves static files.
+>The app builds to a fully static bundle — no server, no environment variables, no database — so it deploys anywhere that serves static files.
 
-1. Push this repository to GitHub.
-2. Import it in Vercel or Netlify.
-3. Build command: `npm run build`
-4. Output directory: `dist`
-5. Deploy. Every subsequent push redeploys automatically.
+>1. Push this repository to GitHub.
+>2. Import it in Vercel or Netlify.
+>3. Build command: `npm run build`
+>4. Output directory: `dist`
+>5. Deploy. Every subsequent push redeploys automatically.
 
 <br/>
 
 ## 11. Known limitations & what's next
 
-- **No persistence.** Everything lives in React state — refresh the page and you're back to the seed data. The hook's public interface (`addMember` / `updateMember` / `removeMember`) is already shaped like it could call a real API instead of `setState`, without changing any component that consumes it.
-- **No authentication.** "Admin" is a data field, not an access-control system.
-- **No automated tests.** Component boundaries were kept simple (plain props in, no component reaching into global state) specifically to make unit testing straightforward to add later.
-- **No pagination.** Fine for a team of a few dozen to a few hundred people rendered client-side; a directory of thousands would want virtualization or server-side pagination.
+>- **No persistence.** Everything lives in React state — refresh the page and you're back to the seed data. The hook's public interface (`addMember` / `updateMember` / `removeMember`) is already shaped like it could call a real API instead of `setState`, without changing any component that consumes it.
+>- **No authentication.** "Admin" is a data field, not an access-control system.
+>- **No automated tests.** Component boundaries were kept simple (plain props in, no component reaching into global state) specifically to make unit testing straightforward to add later.
+>- **No pagination.** Fine for a team of a few dozen to a few hundred people rendered client-side; a directory of thousands would want virtualization or server-side pagination.
 
 <br/>
 
 ## 12. License
 
-MIT — use it, fork it, learn from it, ship it.
+>MIT — use it, fork it, learn from it, ship it.
+
+
+---
+
+<br/>
+
+<div align="center">
+
+**✦ Author ✦**
+
+**Ayesha Abid**
+<div align="center">
+🐙 GitHub: [@your-username](https://github.com/AyeshaAbid892)<br>
+💼 LinkedIn: [your-profile](https://www.linkedin.com/in/ayesha-abid33/)<br>
+📧 Email: ayeshaa.abid33@gmail.com
+
+---
+
+
+<p align="center">
+  <img src="./footer.svg" alt="Roster footer" width="100%" />
+</p>
+
