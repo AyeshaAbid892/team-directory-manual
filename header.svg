@@ -1,0 +1,70 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf6ef" />
+      <stop offset="100%" stop-color="#f2ece0" />
+    </linearGradient>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.1" cy="1.1" r="1.1" fill="#241c15" fill-opacity="0.06" />
+    </pattern>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b4432a" stop-opacity="0" />
+      <stop offset="50%" stop-color="#b4432a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#b4432a" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bgGrad)" />
+  <rect width="1200" height="320" fill="url(#dotGrid)" />
+
+  <!-- top and bottom rule lines, like a printed letterhead -->
+  <rect x="0" y="0" width="1200" height="3" fill="#241c15" />
+  <rect x="0" y="317" width="1200" height="3" fill="#241c15" />
+
+  <!-- Logo mark -->
+  <rect x="80" y="88" width="56" height="56" rx="4" fill="#b4432a" />
+  <text x="108" y="125" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="700" fill="#faf6ef" text-anchor="middle">R</text>
+
+  <!-- Wordmark -->
+  <text x="156" y="122" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#241c15" letter-spacing="0">Roster</text>
+  <text x="158" y="148" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#6b5d4f" letter-spacing="0.5" font-style="italic">Team directory, kept like a ledger</text>
+
+  <!-- Divider accent line -->
+  <rect x="80" y="182" width="360" height="2" fill="url(#accentLine)" />
+
+  <!-- Feature tags — square, stamped look -->
+  <g font-family="'Consolas', 'JetBrains Mono', monospace" font-size="12" font-weight="500">
+    <rect x="80" y="206" width="98" height="28" fill="none" stroke="#241c15" stroke-width="1.2" />
+    <text x="129" y="224" fill="#241c15" text-anchor="middle">REACT 18</text>
+
+    <rect x="188" y="206" width="70" height="28" fill="none" stroke="#241c15" stroke-width="1.2" />
+    <text x="223" y="224" fill="#241c15" text-anchor="middle">VITE</text>
+
+    <rect x="268" y="206" width="132" height="28" fill="none" stroke="#241c15" stroke-width="1.2" />
+    <text x="334" y="224" fill="#241c15" text-anchor="middle">CSV EXPORT</text>
+
+    <rect x="410" y="206" width="128" height="28" fill="none" stroke="#b4432a" stroke-width="1.4" />
+    <text x="474" y="224" fill="#b4432a" text-anchor="middle">FULLY MANUAL</text>
+  </g>
+
+  <!-- Right side: a stack of "index cards" motif, echoing the app's card list -->
+  <g>
+    <rect x="800" y="70" width="330" height="60" rx="3" fill="#fffdf9" stroke="#e3d9c6" stroke-width="1.5" />
+    <rect x="800" y="70" width="330" height="4" fill="#8f3220" />
+    <circle cx="826" cy="100" r="12" fill="#f4e3db" stroke="#b4432a" stroke-width="1" />
+    <rect x="850" y="90" width="140" height="8" rx="1" fill="#241c15" opacity="0.75" />
+    <rect x="850" y="104" width="90" height="6" rx="1" fill="#9c8f7e" />
+
+    <rect x="820" y="140" width="330" height="60" rx="3" fill="#fffdf9" stroke="#e3d9c6" stroke-width="1.5" />
+    <rect x="820" y="140" width="330" height="4" fill="#5c5a2e" />
+    <circle cx="846" cy="170" r="12" fill="#e7e6d3" stroke="#5c5a2e" stroke-width="1" />
+    <rect x="870" y="160" width="150" height="8" rx="1" fill="#241c15" opacity="0.75" />
+    <rect x="870" y="174" width="100" height="6" rx="1" fill="#9c8f7e" />
+
+    <rect x="800" y="210" width="330" height="60" rx="3" fill="#fffdf9" stroke="#e3d9c6" stroke-width="1.5" />
+    <rect x="800" y="210" width="330" height="4" fill="#33543f" />
+    <circle cx="826" cy="240" r="12" fill="#e2e8e2" stroke="#33543f" stroke-width="1" />
+    <rect x="850" y="230" width="130" height="8" rx="1" fill="#241c15" opacity="0.75" />
+    <rect x="850" y="244" width="95" height="6" rx="1" fill="#9c8f7e" />
+  </g>
+</svg>
