@@ -14,7 +14,7 @@
 
 🔗 **[Live Demo](https://team-directory-manual.vercel.app)**  
 <br>
-🎥 **[Video Walkthrough](https://youtu.be/JqQxSIju80s)** *(3–5 min screen recording)*
+🎥 **[Video Walkthrough](https://www.loom.com/share/c0274fff513d418bb17aacae21442ab4)** *(3–5 min screen recording)*
 
 > **Deployment:** GitHub Pages — Settings → Pages → Source: `main` / `root` → Save
 
