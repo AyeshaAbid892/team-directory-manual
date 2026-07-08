@@ -294,6 +294,9 @@ const stop = (handler) => (event) => {
 
 >Without `stopPropagation()`, clicking Follow would also bubble up and trigger the card's own click handler, opening the drawer at the same time you meant to just follow someone.
 
+
+<img width="305" height="400" alt="image" src="https://github.com/user-attachments/assets/2969dd8d-8148-41ef-b8c4-d0516e14fcea" />
+
 ### `src/components/MemberDrawer/`
 >The full-profile slide-in panel. Generates a plausible email from the person's name, formats a human-readable "member since" date from `addedAt`, and exposes Follow/Unfollow, copy email, Edit, and Delete as real actions — plus clickable skill chips that filter the directory and close the drawer in one step. Closes on **Escape** via a `keydown` listener that only exists while the drawer is open.
 
@@ -303,6 +306,9 @@ const stop = (handler) => (event) => {
 ### `src/components/ConfirmDialog/`
 >A small, fully generic "are you sure?" dialog — `title`, `description`, `confirmLabel`, and `onConfirm`/`onCancel`. It has no idea it's currently being used for deleting a team member; it could be reused for any destructive confirmation without modification.
 
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/5a6d5a79-a4ea-415a-ba08-811a2a981297" />
+
+
 ### `src/components/EmptyState/`
 >Shown when a search or filter combination returns zero members. Reads the current query to give a specific message ("Nothing matches 'xyz'...") instead of a generic "no data" message, with a one-click way back to a clear search.
 
@@ -310,6 +316,9 @@ const stop = (handler) => (event) => {
 >A single, app-wide toast. Auto-dismisses after 2.6 seconds via `setTimeout`, but is rendered as a real `<button>` so clicking it dismisses immediately. The `useEffect` cleanup (`clearTimeout`) matters: without it, a second toast replacing the first before the first's timer fires could result in a stray timeout closing a toast that was never shown.
 
 <br/>
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/7eb60158-7e6f-4866-af05-6499682b655b" />
+
 
 ## 7. Design system — the "Ledger" visual language
 
@@ -326,6 +335,9 @@ const stop = (handler) => (event) => {
 | **Spacing scale** | `--space-1` (4px) through `--space-7` (48px) | A consistent scale means every gap, padding, and margin is one of seven values — nothing is an arbitrary number that only exists because it "looked right" in one spot. |
 
 <br/>
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/95019786-d30a-4709-a043-999d9acd45ff" />
+
 
 ## 8. Getting started
 
@@ -352,6 +364,9 @@ npm run dev
 | `npm run preview` | Serves the production build locally, so you can sanity-check it before deploying |
 
 <br/>
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/71cb220d-23b6-4305-b355-e4fdea4da192" />
+
 
 ## 10. Deployment
 
